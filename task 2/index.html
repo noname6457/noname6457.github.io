@@ -270,7 +270,13 @@
                 <label>
                     ФИО:
                     <br>
-                    <input type="text" name="full_name">
+                    <input 
+                    type="text" 
+                    name="full_name"
+                    required
+                    pattern="[А-Яа-яЁёA-Za-z\s\-]+"
+                    title="ФИО должно содержать только буквы, пробелы и дефисы"
+                    >
                 </label>
 
                 <br>
@@ -278,7 +284,13 @@
                 <label>
                     Телефон:
                     <br>
-                    <input type="tel" name="phone">
+                    <input 
+                    type="tel" 
+                    name="phone"
+                    required
+                    pattern="[0-9+\(\)\s\-]+"
+                    title="Введите корректный номер телефона"
+                    >
                 </label>
 
                 <br>
@@ -286,7 +298,11 @@
                 <label>
                     E-mail:
                     <br>
-                    <input type="email" name="email">
+                    <input 
+                    type="email" 
+                    name="email"
+                    required
+                    >
                 </label>
 
                 <br>
@@ -294,7 +310,12 @@
                 <label>
                     Дата рождения:
                     <br>
-                    <input type="date" name="birthdate">
+                    <input 
+                    type="date" 
+                    name="birthdate"
+                    required
+                    max="2026-09-27"
+                    >
                 </label>
 
                 <br>
@@ -302,12 +323,21 @@
                 Пол:
 
                 <label>
-                    <input type="radio" name="gender" value="male">
+                    <input 
+                    type="radio" 
+                    name="gender" 
+                    value="male"
+                    required
+                    >
                     Мужской
                 </label>
 
                 <label>
-                    <input type="radio" name="gender" value="female">
+                    <input 
+                    type="radio" 
+                    name="gender" 
+                    value="female"
+                    >
                     Женский
                 </label>
 
@@ -317,7 +347,7 @@
                     Любимые языки программирования:
                     <br>
 
-                    <select name="languages[]" multiple>
+                    <select name="languages[]" multiple required>
                         <option value="Pascal">Pascal</option>
                         <option value="C">C</option>
                         <option value="C++">C++</option>
@@ -343,7 +373,7 @@
                 <br>
 
                 <label>
-                    <input type="checkbox" name="contract">
+                    <input type="checkbox" name="contract" required>
                     С контрактом ознакомлен(а)
                 </label>
 
