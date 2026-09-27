@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* ШАПКА */
+
+header {
+    width: 100%;
+    background-color: #d3d3d3;
+}
+
+.header-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.site-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.site-name {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* МЕНЮ */
+
+.menu {
+    margin-top: 20px;
+}
+
+.menu a {
+    margin-right: 20px;
+}
+
+
+/* ОСНОВНОЙ КОНТЕНТ */
+
+.content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+
+/* ТАБЛИЦА */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+th {
+    background-color: #999;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #eeeeee;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #cccccc;
+}
+
+
+/* ФОРМА */
+
+form input,
+form select,
+form textarea {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+
+/* ПОДВАЛ */
+
+footer {
+    width: 100%;
+    background-color: #d3d3d3;
+}
+
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
