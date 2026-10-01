@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #b0d0fa;
+    color: #222;
+}
+
+
+/* Общий контейнер */
+
+.container {
+    width: 100%;
+    max-width: 960px;
+
+    margin: 0 auto;
+    padding: 20px;
+
+    
+}
+
+
+/* Шапка */
+
+header {
+    width: 100%;
+
+    background-color: #333;
+    color: white;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+header p {
+    margin: 0;
+}
+
+
+/* Список заданий */
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* Карточка задания */
+
+.task-card {
+    background-color: white;
+
+    padding: 20px;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.task-card h2 {
+    margin-top: 0;
+}
+
+
+/* Ссылки */
+
+.task-links {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.task-links a {
+    display: block;
+
+    padding: 12px 16px;
+
+    text-decoration: none;
+
+    color: white;
+    background-color: #333;
+
+    border-radius: 6px;
+}
+
+.task-links a:hover {
+    background-color: #555;
+}
+
+
+/* Подвал */
+
+footer {
+    width: 100%;
+
+    margin-top: 40px;
+
+    background-color: #333;
+    color: white;
+}
+
+
+/* Планшеты и компьютеры */
+
+@media screen and (min-width: 768px) {
+
+    .task-links {
+        flex-direction: row;
+    }
+
+    .task-links a {
+        width: auto;
+    }
+}
