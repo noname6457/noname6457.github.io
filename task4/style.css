@@ -1,0 +1,247 @@
+:root {
+    --bg: #0f0f0f;
+    --panel: #181818;
+    --panel-2: #202020;
+    --accent: #ff8a00;
+    --accent-dark: #cc6f00;
+    --text: #f5f5f5;
+    --muted: #b8b8b8;
+    --border: #343434;
+}
+
+/* ОБЩИЙ ФОН */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background:
+        radial-gradient(circle at top, #2a1705 0, #151515 34%, #0f0f0f 72%);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffad42;
+    text-decoration: underline;
+}
+
+
+/* ШАПКА */
+
+header.bg-light {
+    background: linear-gradient(180deg, #151515 0%, #0b0b0b 100%) !important;
+    border-bottom: 3px solid var(--accent);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.45);
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+    border-radius: 10px;
+    background-color: #000;
+    padding: 4px;
+}
+
+.site-name {
+    display: inline-block;
+    color: white;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.site-name::after {
+    content: "";
+    display: inline-block;
+    width: 34px;
+    height: 8px;
+    margin-left: 10px;
+    background-color: var(--accent);
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+header nav {
+    background-color: #161616;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 12px;
+}
+
+header nav a {
+    display: block;
+    padding: 8px 12px;
+    color: var(--text);
+    font-weight: 700;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+header nav a:hover {
+    background-color: var(--accent);
+    color: #111;
+    text-decoration: none;
+}
+
+
+/* ОСНОВНЫЕ БЛОКИ */
+
+main > .row > section {
+    background: linear-gradient(180deg, var(--panel-2), var(--panel));
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.32);
+}
+
+main h1 {
+    color: var(--text);
+    font-weight: 800;
+    font-size: 1.7rem;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent);
+}
+
+#links ul {
+    padding-left: 1.4rem;
+}
+
+#links li {
+    margin-bottom: 9px;
+    color: var(--muted);
+}
+
+#links li::marker {
+    color: var(--accent);
+}
+
+#links img {
+    border-radius: 10px;
+    border: 1px solid #3d3d3d;
+    margin-top: 8px;
+}
+
+
+/* ТАБЛИЦА */
+
+#table .table-responsive {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#table table {
+    --bs-table-bg: #191919;
+    --bs-table-color: var(--text);
+    --bs-table-border-color: #3b3b3b;
+    --bs-table-striped-bg: #242424;
+    --bs-table-striped-color: var(--text);
+    margin: 0;
+}
+
+#table thead.table-secondary {
+    --bs-table-bg: var(--accent);
+    --bs-table-color: #111;
+}
+
+#table thead th {
+    font-weight: 800;
+}
+
+#table tfoot td {
+    background-color: #2a1a09;
+    color: #ffd19a;
+    font-weight: 700;
+}
+
+
+/* ФОРМА */
+
+#form .form-label,
+#form legend,
+#form .form-check-label {
+    color: var(--text);
+    font-weight: 600;
+}
+
+#form .form-control,
+#form .form-select {
+    background-color: #111;
+    color: var(--text);
+    border: 1px solid #444;
+}
+
+#form .form-control:focus,
+#form .form-select:focus {
+    background-color: #111;
+    color: var(--text);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 0.25rem rgba(255, 138, 0, 0.18);
+}
+
+#form .form-control::placeholder {
+    color: #777;
+}
+
+#form .form-check-input {
+    background-color: #111;
+    border-color: #666;
+}
+
+#form .form-check-input:checked {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+#form .btn-primary {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: #111;
+    font-weight: 800;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+#form .btn-primary:hover {
+    background-color: #ffa12a;
+    border-color: #ffa12a;
+    color: #111;
+}
+
+
+/* ПОДВАЛ */
+
+footer.bg-light {
+    background: linear-gradient(180deg, #0b0b0b 0%, #151515 100%) !important;
+    color: var(--muted);
+    border-top: 3px solid var(--accent);
+    box-shadow: 0 -5px 18px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    text-align: center;
+}
+
+
+/* НЕБОЛЬШАЯ АДАПТАЦИЯ */
+
+@media (max-width: 767.98px) {
+    .site-name::after {
+        display: none;
+    }
+
+    main > .row > section {
+        padding: 16px;
+    }
+
+    header nav a {
+        width: 100%;
+    }
+}
