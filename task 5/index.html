@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 5</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1>Калькулятор стоимости заказа</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="calculator-card">
+            <h2>Расчёт стоимости</h2>
+
+            <form id="calculator-form" novalidate>
+                <div class="form-group">
+                    <label for="product">Товар:</label>
+
+                    <select id="product" name="product">
+                        <option value="1500">Компьютерная мышь — 1500 ₽</option>
+                        <option value="3000">Клавиатура — 3000 ₽</option>
+                        <option value="4500">Наушники — 4500 ₽</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Количество:</label>
+
+                    <input
+                        id="quantity"
+                        name="quantity"
+                        type="text"
+                        inputmode="numeric"
+                        placeholder="Введите количество"
+                    >
+
+                    <p id="error-message" class="message error-message"></p>
+                </div>
+
+                <button id="calculate-button" type="button">
+                    Рассчитать стоимость
+                </button>
+            </form>
+
+            <div class="result-box">
+                <h3>Стоимость заказа</h3>
+                <p id="result">Выберите товар и укажите количество.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© Задание 5</p>
+        </div>
+    </footer>
+</body>
+</html>
